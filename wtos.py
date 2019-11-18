@@ -71,7 +71,7 @@ def load_orders(bc_number):
                 elif content[2:11] == str(bc_number) + ' start': # current start
                     #break # ignore
                     print('start')
-                elif content[2:5] == str(bc_number): # BC123
+                elif content[2:5] == str(bc_number) or content[3:5] == str(bc_number): # BC123
                     if poster not in orders:
                         orders[poster] = []
                     lines = content.split('\n')[1:]
